@@ -1,0 +1,211 @@
+mod = "mod4"
+
+
+keys = [
+  
+    
+
+
+    # Mover la ventana.
+    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Moveer la ventana hacia la izquierda"),
+    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Mover la ventana hacia la derecha"),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Mover la ventana hacia abajo"),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Mover la ventana hacia arriba"),
+    
+    # Modificar dimensiones de la ventana
+    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Agrandar ventana hacia la izquierda"),
+    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Agrandar ventana hacia la derecha"),
+    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Agrandar vetnana hacia abajo"),
+    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Agrandar ventana hacia arriba"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Resetiar lan dimensiones de las ventanas"),
+
+    # Full ventanas
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="fullscreen"),
+    Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Agrandar la ventana en forma vertical"),
+    Key([mod], "Tab", lazy.next_layout(), desc="Modificar las vistas del layouts"),
+    
+    # Toggle between split and unsplit sides of stack.
+    # Split = all windows displayed
+    # Unsplit = 1 window displayed, like Max layout, but still with
+    # multiple stack panes
+    Key([mod], "Return", lazy.spawn("alacritty"), desc="Launch terminal"),
+   
+    #Teclas para lanzar aplicaciones
+    Key([mod], "m", lazy.spawn("rofi -show drun"), desc="Lanzar menu"),
+    Key([mod], "b", lazy.spawn("brave"), desc="Lanzar Navegador brave"),
+    Key([mod, "control"], "f", lazy.spawn("firefox"), desc="Lanzar Navegador firefox"),
+    
+    
+
+    # Cerrar una ventana
+    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
+   
+    # Comandos de manejo Qtile
+    Key([mod], "r", lazy.spawncmd(), desc="Reiniciar Qtile con su configuracion basica"),
+    Key([mod, "control"], "r", lazy.reload_config(), desc="Recargar Qtile"),
+    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile, o cerrar sesion"),
+
+    Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
+
+    #! Control Volumen
+    Key([], "XF86AudioLowerVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    )),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    )),
+    Key([], "XF86AudioMute", lazy.spawn(
+        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    )),
+
+     # Brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+
+    #? CAPTURA DE PANTALLA
+    Key([mod], "s", lazy.spawn("scrot")),
+    Key([mod, "shift"], "s", lazy.spawn("scrot -s")),
+   
+]
+
+
+
+
+keys = [Key(key[0], key[1], *key[2:]) for key in [
+
+    #? MOVER EL FOCO DE LA VENTANA <^>
+    ([mod], "h", lazy.layout.left()),
+    ([mod], "l", lazy.layout.right()),
+    ([mod], "j", lazy.layout.down()),
+    ([mod], "k", lazy.layout.up()),
+    ([mod], "space", lazy.layout.next()),
+
+    #? AGRANDAR LA VENTANA ENFOCADA HACIA DISTINTAS DIRECCIONES
+    ([mod, "control"], "h", lazy.layout.grow_left())
+    ([mod, "control"], "l", lazy.layout.grow_right())
+    ([mod, "control"], "j", lazy.layout.grow_down())
+    ([mod, "control"], "k", lazy.layout.grow_up())
+    ([mod], "n", lazy.layout.normalize())
+
+    #? FULL VENTANA - FULL EN COLUMNA - VISTA LAYOUT
+    ([mod], "f", lazy.window.toggle_fullscreen()),
+    ([mod, "shift"], "Return", lazy.layout.toggle_split()),
+    ([mod], "Tab", lazy.next_layout()),
+
+    #!LANZAR PROGRAMAS
+    ([mod], "Return", lazy.spawn("alacritty")),
+    ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "b", lazy.spawn("brave")),
+    ([mod], "c", lazy.spawn("brave")),
+    ([mod, "control"], "f", lazy.spawn("firefox")),
+
+    #? REINICIAR - RECARGAR  / QTILE
+    ([mod], "r", lazy.spawncmd()),
+    ([mod, "control"], "r", lazy.reload_config()),
+
+    #? CERRAR SESION
+    ([mod, "control"], "q", lazy.shutdown()),
+
+    ([mod], "t", lazy.window.toggle_floating()),
+
+    #? KILL WINDOWS
+    ([mod], "w", lazy.window.kill()),
+
+    #? CONTROL DE VOLUMEN
+    ([], "XF86AudioLowerVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    )),
+    ([], "XF86AudioRaiseVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    )),
+    ([], "XF86AudioMute", lazy.spawn(
+        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    )),
+
+    #? CONTROL DE BRILLO DE PANTALLA
+    ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+
+    #? CAPTURA DE PANTALLA
+    ([mod], "s", lazy.spawn("scrot")),
+    ([mod, "shift"], "s", lazy.spawn("scrot -s")),
+]]
+
+
+#! Colores
+class Colores: 
+    morado= "#651366"
+    bege= "#e4ded0"
+    verdeOpaco= "#abccbd"
+    celesteAqua= "#7dbeb8"
+    naranja= "#f76e2a"
+    naranjaRgb1= "#f62a14"
+    negro20= "#202020"
+    negro2f= "#2f2f2f"
+    rosaFuerte= "#e7204e"
+    oscuro= "#181619"
+
+
+#! Funcion de barra inicio/final
+def barra(color, tipo):
+     if tipo == 0:
+         icono=""
+     else:
+         icono=""
+     return widget.TextBox(background= Colores.negro20,
+                               text=icono,
+                               foreground= color,
+                               fontsize = 45,
+                               padding=-1,
+                               )
+
+#! funcion de parametros
+def fc_icono(icono, color):
+    return widget.TextBox(background= color,
+                               text=icono,
+                               foreground= Colores.negro20,
+                               #padding=0,
+                               fontsize = 22,
+                               )
+
+
+screens = [
+    Screen(
+        top=bar.Bar(
+            [
+        
+
+               #! Seccion de fecha y audio PC grupo 3
+   
+
+                barra (Colores.verdeOpaco, 1),
+
+
+                separadorWidget (),
+                
+                #! Seccion de grupo 6
+                barra (Colores.morado, 0),
+                widget.QuickExit(background=Colores.morado),
+                widget.CurrentLayoutIcon(background=Colores.morado),
+                                       
+                   
+                        
+                barra (Colores.morado, 1),
+               
+               separadorWidget (),
+                #widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                
+                #widget.CurrentLayout(),
+                
+            ],
+            30,
+            background= Colores.negro20
+            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+        ),
+        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
+        # By default we handle these events delayed to already improve performance, however your system might still be struggling
+        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
+        # x11_drag_polling_rate = 60,
+    ),
+]
