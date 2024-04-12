@@ -8,3 +8,4 @@
 - link:
     ~/.dotly: os/linux/.dotly
     ~/.config/qtile: os/linux/qtile
+    ~/.config/nvim: editors/nvim
