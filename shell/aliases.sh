@@ -7,6 +7,8 @@ alias ll="ls -l"
 alias la="ls -la"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
+alias c="clear"
+alias zshr="source ~/.zshrc"
 
 # Git
 alias gaa="git add -A"
@@ -28,3 +30,11 @@ alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
 alias o.='open .'
 alias up='dot package update_all'
+
+# Cat
+alias cat="bat"
+
+# Directorios
+alias veme="/mnt/Datos/veme-web"
+alias tot="/mnt/Datos/onion-talks"
+alias cursos="/mnt/Datos/cursos"
