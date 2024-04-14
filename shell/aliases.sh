@@ -38,3 +38,4 @@ alias cat="bat"
 alias veme="/mnt/Datos/veme-web"
 alias tot="/mnt/Datos/onion-talks"
 alias cursos="/mnt/Datos/cursos"
+alias vimc='~/.dotfiles/editors/nvim'
