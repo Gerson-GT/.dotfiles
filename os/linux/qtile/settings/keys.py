@@ -33,6 +33,8 @@ keys = [
     Key([mod], "x", lazy.spawn("keepassxc")),
     Key([mod, "shift"], "t", lazy.spawn("thunar")),
     Key([mod], "Return", lazy.spawn("alacritty")),
+    Key([mod], "p", lazy.spawn("postman")),
+    Key([mod, "control"], "d", lazy.spawn("docker-desktop")),
     #Key([mod], "u", lazy.spawn("sudo gufw")),
 
 

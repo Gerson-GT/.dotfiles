@@ -35,7 +35,7 @@ alias up='dot package update_all'
 alias cat="bat"
 
 # Directorios
-alias veme="/mnt/Datos/veme-web"
-alias tot="/mnt/Datos/onion-talks"
+alias veme="~/Documentos/veme-web"
+alias tot="~/Documentos/onion-talks"
 alias cursos="/mnt/Datos/cursos"
 alias vimc='~/.dotfiles/editors/nvim'

@@ -45,6 +45,8 @@ path=(
 	"/usr/sbin"
 	"/sbin"
 	"$path"
+	#Personal
+	"$PATH:/opt/docker-desktop/bin"
 )
 
 export path
