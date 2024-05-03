@@ -8,7 +8,8 @@
 </h1>
 
 * Git
-* ZSH
+* <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH"> ZSH</a>
+* <a href="https://github.com/zimfw/zimfw"> Zim</a>
 * Zim
 
 ## Restore your Dotfiles manually
