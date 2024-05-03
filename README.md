@@ -2,6 +2,15 @@
   .dotfiles created using <a href="https://github.com/CodelyTV/dotly">🌚 dotly</a>
 </h1>
 
+
+<h1 align="center">
+  Programs to install
+</h1>
+
+* Git
+* ZSH
+* Zim
+
 ## Restore your Dotfiles manually
 
 * Install git
