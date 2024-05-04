@@ -15,6 +15,8 @@
 * <a href="https://forums.linuxmint.com/viewtopic.php?t=231902"> Mount NTFS data</a>
 * <a href="https://keepassxc.org/"> keepassxc</a>
 * <a href="https://brave.com//"> Brave</a>
+* Bat
+* 
 
 
 ## Restore your Dotfiles
