@@ -8,9 +8,13 @@
 </h1>
 
 * Git
+* Curl
 * <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH"> ZSH</a>
+* <a href="https://www.rust-lang.org/tools/install"> Rust</a>
+* <a href="https://alacritty.org/"> Alacritty</a>
+* Vim and Neovim
 * <a href="https://github.com/zimfw/zimfw"> Zim</a>
-* Zim
+* <a href="https://forums.linuxmint.com/viewtopic.php?t=231902"> Mount NTFS data</a>
 
 ## Restore your Dotfiles manually
 
