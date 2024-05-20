@@ -47,6 +47,7 @@ path=(
 	"$path"
 	#Personal
 	"$PATH:/opt/docker-desktop/bin"
+	"$PATH:/opt/nvim-linux64/bin"
 )
 
 export path

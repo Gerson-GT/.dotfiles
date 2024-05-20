@@ -32,10 +32,7 @@ alias o.='open .'
 alias up='dot package update_all'
 
 # Cat
-alias cat="bat"
+alias cat="batcat"
 
 # Directorios
-alias veme="~/Documentos/veme-web"
-alias tot="~/Documentos/onion-talks"
-alias cursos="/mnt/Datos/cursos"
-alias vimc='~/.dotfiles/editors/nvim'
+alias datos="/mnt/Datos"
