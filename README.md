@@ -3,9 +3,7 @@
 </h1>
 
 
-<h1 align="center">
-  Programs to install
-</h1>
+ ## Programs to install
 
 * Git
 * Curl
@@ -17,17 +15,15 @@
 * <a href="https://forums.linuxmint.com/viewtopic.php?t=231902"> Mount NTFS data</a>
 * <a href="https://keepassxc.org/"> keepassxc</a>
 * <a href="https://brave.com//"> Brave</a>
+* Bat
+* 
 
 
-## Restore your Dotfiles manually
-
-* Install git
-* Clone your dotfiles repository `git clone [your repository of dotfiles] $HOME/.dotfiles`
-* Go to your dotfiles folder `cd $HOME/.dotfiles`
-* Install git submodules `git submodule update --init --recursive modules/dotly`
-* Install your dotfiles `DOTFILES_PATH="$HOME/.dotfiles" DOTLY_PATH="$DOTFILES_PATH/modules/dotly" "$DOTLY_PATH/bin/dot" self install`
+## Restore your Dotfiles
+* Clone your dotfiles repository
+* Go to your dotfiles folder
+* Run restorer
 * Restart your terminal
-* Import your packages `dot package import`
 
 ## Restore your Dotfiles with script
 
@@ -40,7 +36,3 @@ Using curl
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/restorer)
 ```
-
-You need to know your GitHub username, repository and install ssh key if your repository is private.
-
-It also supports other git repos, but you need to know your git repository url.
